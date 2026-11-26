@@ -1,0 +1,34 @@
+{
+  "actorSpecification": 1,
+  "name": "india-career-site-jobs",
+  "title": "India Jobs Feed: Company Career Sites (Greenhouse, Lever, Ashby, SmartRecruiters)",
+  "description": "Fresh India job openings straight from company career sites, via official public ATS APIs. Filter by city, keyword and age, or get only jobs that are new since your last run.",
+  "version": "0.1",
+  "buildTag": "latest",
+  "input": "./input_schema.json",
+  "dockerfile": "./Dockerfile",
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "views": {
+        "overview": {
+          "title": "Jobs",
+          "transformation": { "fields": ["title", "company", "location", "cities", "workplaceType", "department", "postedAt", "url"] },
+          "display": {
+            "component": "table",
+            "properties": {
+              "title": { "label": "Title" },
+              "company": { "label": "Company" },
+              "location": { "label": "Location" },
+              "cities": { "label": "Cities" },
+              "workplaceType": { "label": "Workplace" },
+              "department": { "label": "Department" },
+              "postedAt": { "label": "Posted", "format": "date" },
+              "url": { "label": "Link", "format": "link" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{"jobs":[
+{"address":{"postalAddress":{"addressCountry":"India"}},"applyUrl":"https://jobs.ashbyhq.com/atlan/c6/application","compensation":{"compensationTierSummary":null,"scrapeableCompensationSalarySummary":null},"department":"Engineering","descriptionHtml":"<h2>Who We Are</h2><p>Atlan</p>","descriptionPlain":"WHO WE ARE\n\nAtlan","employmentType":"FullTime","id":"c6","isListed":true,"isRemote":true,"jobUrl":"https://jobs.ashbyhq.com/atlan/c6","location":"India","publishedAt":"2026-10-26T09:57:21.274+00:00","secondaryLocations":[],"team":"Engineering","title":"AI Native Builder/Architect","workplaceType":"Remote"},
+{"id":"hidden","isListed":false,"title":"Secret","location":"Pune","jobUrl":"u"},
+{"id":"us","isListed":true,"title":"AE","location":"New York","address":{"postalAddress":{"addressCountry":"United States","addressLocality":"New York"}},"secondaryLocations":[{"location":"Bangalore","address":{"postalAddress":{"addressCountry":"India","addressLocality":"Bengaluru"}}}],"jobUrl":"u2","publishedAt":"2026-11-01T00:00:00Z"}
+]}

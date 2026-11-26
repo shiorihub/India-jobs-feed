@@ -1,0 +1,93 @@
+{
+  "title": "India career-site jobs",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "keywords": {
+      "title": "Keywords",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Keep jobs whose title, department or team contains any of these. Leave empty for all jobs.",
+      "prefill": ["engineer"]
+    },
+    "excludeKeywords": {
+      "title": "Exclude keywords",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Drop jobs whose title contains any of these, for example intern or director."
+    },
+    "cities": {
+      "title": "Cities",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Indian cities to keep, for example Bengaluru, Hyderabad, Pune. Old spellings such as Bangalore and Gurgaon are understood. Leave empty for all of India."
+    },
+    "postedWithinDays": {
+      "title": "Posted within (days)",
+      "type": "integer",
+      "minimum": 0,
+      "description": "Only jobs posted in the last N days. 0 means no limit.",
+      "default": 0
+    },
+    "remoteOnly": {
+      "title": "Remote only",
+      "type": "boolean",
+      "default": false
+    },
+    "onlyNew": {
+      "title": "Only jobs new since the last run",
+      "type": "boolean",
+      "description": "Remembers what it already returned, so a scheduled run gives you only fresh postings. You pay only for new jobs.",
+      "default": false
+    },
+    "stateKey": {
+      "title": "Feed name",
+      "type": "string",
+      "editor": "textfield",
+      "description": "Used with 'only new'. Give each separate feed its own name so they do not share memory.",
+      "default": "default"
+    },
+    "maxItems": {
+      "title": "Maximum jobs",
+      "type": "integer",
+      "minimum": 0,
+      "description": "Stop after this many jobs. 0 means no limit.",
+      "default": 0
+    },
+    "includeDescription": {
+      "title": "Include full job description",
+      "type": "boolean",
+      "default": true
+    },
+    "searchDescription": {
+      "title": "Also search keywords in the description",
+      "type": "boolean",
+      "default": false
+    },
+    "indiaOnly": {
+      "title": "India jobs only",
+      "type": "boolean",
+      "description": "Turn off to get every open job at the listed companies, worldwide.",
+      "default": true
+    },
+    "includeDefaultCompanies": {
+      "title": "Use the built-in company list",
+      "type": "boolean",
+      "description": "The built-in list covers companies verified to be hiring in India.",
+      "default": true
+    },
+    "companies": {
+      "title": "Extra companies",
+      "type": "array",
+      "editor": "stringList",
+      "description": "Add your own boards as ats:token, for example greenhouse:stripe, lever:cred, ashby:notion or smartrecruiters:BoschGroup. The token is the last part of the company's job board address."
+    },
+    "concurrency": {
+      "title": "Parallel requests",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20,
+      "default": 8
+    }
+  }
+}
